@@ -8,8 +8,13 @@
   font-family:"Rubik";
   src:url(./fonts/Rubik/Rubik-Regular.ttf);
 }
+@font-face {
+  font-family:"Space";
+  src:url(./fonts/Space_Grotesk/SpaceGrotesk-Regular.ttf);
+}
 @theme inline {
   --font-Rubik:"Rubik",sans-serif;
+  --font-Space:"Space",sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
