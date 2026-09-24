@@ -7,6 +7,6 @@ export function TailwindIcon()
             300Q30 300 0 420q45-60 105-45c22.8 5.7 39.1 22.3 
             57.2 40.6C191.6 445.4 225.6 480 300 480q120 0 150-120-45 60-105 45c-22.8-5.7-39.1-22.3-57.2-40.6C258.4 334.6 224.4 300 150 300"/><defs><linearGradient id="devicon-tailwind-icon-1-a" x1="-1666.7" x2="50153.2" y1="11640" 
             y2="41518.1" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#2298BD"/><stop offset="1" stop-color="#0ED7B5"/></linearGradient></defs></svg>
+                <stop stopColor="#2298BD"/><stop offset="1" stopColor="#0ED7B5"/></linearGradient></defs></svg>
     )
 }

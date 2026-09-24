@@ -1,21 +1,40 @@
 "use client"
 import {IconBar} from "./components/iconbar"
-import {ProjectCard} from "./components/projectcard"
-import {EducationSection} from "./components/educationsection"
-import {ArrowIcon} from "./components/icons/arrowicon"
-import {ProjectSection} from  "./components/projectsection"
-import {SkillSection} from "./components/skillsection"
-import { useState } from "react"
+import Link from "next/link";
+import {FullStackAnimation} from "./components/fullstackanimation"
 export default function Page()
 {
-  const[showprojects,setShowprojects] = useState(false)
-  const[showeducation,setShoweducation] = useState(false)
-  const[showskills,setShowskills] = useState(false)
   return (
     <div className="bg-mist-700 min-h-screen w-full">
-      <div className="bg-mist-200 h-25 w-full" >
-      <div className="flex justify-center pt-3">
+      <div className="bg-mist-400 h-25 w-full flex items-center gap-8" >
+  
+        <div className="flex pt-10 pl-20 items-center gap-2">
+        <Link href="/projects" >
+        <span className="text-mist-700">▶</span>
+        </Link>
+        <p className="font-Space text-primary font-bold text-2xl">
+          PROJECTS
+        </p>
+        </div>
+      <div className="flex pt-10 items-center gap-2">
+        <Link href="/skills" >
+        <span className="text-mist-700">▶</span>
+        </Link>
+          <p className="text-2xl text-primary font-bold font-Space ">
+            SKILLS
+          </p>
+          </div>
+          <div className="flex pt-10 items-center gap-2">
+        <Link href="/education" >
+        <span className="text-mist-700">▶</span>
+        </Link>
+          <p className="text-2xl text-primary font-bold font-Space ">
+            EDUCATION
+          </p>
+          
+        <div className="flex justify-center pl-150 pb-10">
        <IconBar/>
+       </div>
        </div>
       </div>
       <div className="flex justify-center pt-10">
@@ -23,39 +42,14 @@ export default function Page()
         VAMSI VARDHAN KATURI
         </p>
       </div>
-      <div className="flex justify-center pt-10 items-center gap-2">
-        <div>
-          <ArrowIcon onClick={()=>setShoweducation(!showeducation)} variant="primary" />
-        </div>
-        <p className="font-Space text-4xl">
-          EDUCATION
-        </p>
-         </div>
-         <div className="flex justify-center pt-10">
-        {showeducation &&  
-            <EducationSection />
-          }
-          </div>
-        <div className="flex justify-center items-center gap-2 pt-10">
-        <ArrowIcon onClick={()=>setShowskills(!showskills)} variant="primary" />
-          <p className="text-4xl font-Space ">
-            SKILLS
-          </p>
-
-        </div>
-          {showskills && 
-            <SkillSection />
-          }
-      <div className="flex justify-center items-center gap-2 pt-30">
-        <ArrowIcon onClick={()=>setShowprojects(!showprojects)} variant="primary" />
-        <p className="font-Space text-4xl">
-          PROJECTS
-        </p>
-        </div>
-      {showprojects && 
-        <ProjectSection />
-        }
-
+      <div className= "flex justify-end pr-40">
+        <p className= "font-Space text-mist-200 text-2xl">
+        Full-Stack Developer | Web & Real-Time Systems
+        </p>  
+      </div>    
+      <div className="bg-mist-400 h-100">
+        <FullStackAnimation />
+      </div>
     </div>
   )
 }
