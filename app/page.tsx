@@ -1,6 +1,7 @@
 "use client"
 import {IconBar} from "./components/iconbar"
 import Link from "next/link";
+import { motion } from "motion/react";
 import {FullStackAnimation} from "./components/fullstackanimation"
 export default function Page()
 {
@@ -32,9 +33,7 @@ export default function Page()
             EDUCATION
           </p>
           
-        <div className="flex justify-center pl-150 pb-10">
-       <IconBar/>
-       </div>
+      
        </div>
       </div>
       <div className="flex justify-center pt-10">
@@ -47,9 +46,23 @@ export default function Page()
         Full-Stack Developer | Web & Real-Time Systems
         </p>  
       </div>    
-      <div className="bg-mist-400 h-100">
+      <div className="bg-mist-400 max-w-5xl mx-auto rounded-2xl">
         <FullStackAnimation />
       </div>
+
+      <motion.div
+        className="fixed bottom-0 left-1/2 z-50 -translate-x-1/2 pt-60"
+        animate={{
+        y: [0, -8, 0],
+      }}
+        
+      transition={{
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+      }}>
+      <IconBar />
+      </motion.div>
     </div>
   )
 }

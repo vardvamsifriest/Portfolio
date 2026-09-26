@@ -12,8 +12,8 @@ const sizeStyles ={
     "lg":"p-8"
 }
 const variantStyles = {
-    "primary":"bg-mist-800 shadow-md rounded-md hover:cursor-pointer transition-all hover:scale-115",
-    "secondary":"bg-mist-200 shadow-md rounded-lg hover:cursor-pointer transition-all hover:scale-115"
+    "primary":"bg-mist-800 shadow-md rounded-md hover:cursor-pointer transition-transform hover:scale-115",
+    "secondary":"bg-mist-200 shadow-md rounded-md hover:cursor-pointer transition-transform hover:scale-115"
 }
 export function Button(props:buttonprops)
 {

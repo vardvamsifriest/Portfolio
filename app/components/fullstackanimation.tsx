@@ -4,13 +4,13 @@ import { motion } from "motion/react";
 
 export function FullStackAnimation() {
   return (
-    <div className="mt-16 flex justify-center">
+    <div className="mt-30 flex justify-center">
       <svg
         viewBox="0 0 1000 420"
         className="w-full max-w-5xl"
         fill="none"
       >
-        {/* Connections */}
+        
 
         <motion.path
           d="M250 100 L500 210"
@@ -52,7 +52,7 @@ export function FullStackAnimation() {
           transition={{ duration: 1.5 }}
         />
 
-        {/* Animated packets */}
+        
 
         <motion.circle
           r="5"
@@ -113,19 +113,13 @@ export function FullStackAnimation() {
           }}
         />
 
-        {/* React / Next */}
+        {/* Nodes */}
 
         <Node x={250} y={100} title="Next.js / React" />
 
-        {/* API */}
-
         <Node x={750} y={100} title="REST / WebSocket" />
 
-        {/* Backend */}
-
         <Node x={500} y={210} title="Node.js / Express" />
-
-        {/* Databases */}
 
         <Node x={300} y={330} title="PostgreSQL" />
 
@@ -151,21 +145,15 @@ function Node({
       transition={{ duration: 0.6 }}
       style={{ transformOrigin: `${x}px ${y}px` }}
     >
-      <motion.circle
-        cx={x}
-        cy={y}
-        r="48"
+      <motion.rect
+        x={x - 70}
+        y={y - 30}
+        width="140"
+        height="60"
+        rx="10"
         stroke="#E4E8E9"
         strokeOpacity="0.5"
         fill="#30383A"
-        animate={{
-          r: [48, 51, 48],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
       />
 
       <text
@@ -173,8 +161,9 @@ function Node({
         y={y + 5}
         textAnchor="middle"
         fill="#E4E8E9"
+        fontFamily="Space"
         fontSize="14"
-        fontWeight="500"
+        fontWeight="700"
       >
         {title}
       </text>
