@@ -33,11 +33,11 @@ export function SkillSection()
     const[showdatabases,setShowdatabases] = useState(false)
     const[showtools,setShowtools] = useState(false)
     return (
-        <div className="flex justify-center pt-10">
-        <div className="bg-mist-200 min-h-60 w-80 rounded-lg shadow-xl">
+        <div className="flex justify-center pt-20">
+        <div className="bg-mist-300 min-h-60 w-80 rounded-lg shadow-xl">
             <div className="pt-4 pl-4 flex items-center gap-2">
             <ArrowIcon onClick={()=>setShowlanguages(!showlanguages)} variant="secondary"/>
-            <p className="font-Rubik text-xl text-primary">
+            <p className="font-Rubik text-xl text-mist-700">
                 Languages
             </p>
             </div>
