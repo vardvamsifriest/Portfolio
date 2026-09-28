@@ -100,6 +100,34 @@ export default function ZrawPage()
                         </motion.div>
                         </div>
                 </div>
+                <div className="flex justify-center pt-20">
+                    <p className="text-secondary font-Space font-bold text-4xl">
+                        Visual Walkthrough
+                    </p>
+                </div>
+                <div className="pt-10">
+                <div className="relative h-[400px] w-full">
+
+                <img src="/zraw1.png" className="absolute z-20 left-1/2 top-0 w-[420px] h-[320px]
+                -translate-x-1/2 border-4 border-secondary shadow-lg"/>
+
+                <img src="/zraw2.png" className="absolute z-10 left-[16%] top-16 w-[420px] aspect-video
+                -rotate-16 border-4 border-secondary shadow-lg"/>
+
+                <img src="/zraw3.png" className="absolute z-10 right-[16%] top-16 w-[420px] aspect-video
+                rotate-16 border-4 border-secondary shadow-lg"/>
+
+                </div>
+                <div className="relative h-[400px] w-full">
+
+                <img src="/zraw4.png" className="absolute z-10 left-[26%] top-16 w-[420px] aspect-video
+                -rotate-16 border-4 border-secondary shadow-lg"/>
+
+                <img src="/zraw5.png" className="absolute z-10 right-[26%] top-16 w-[420px] aspect-video
+                rotate-16 border-4 border-secondary shadow-lg"/>
+
+                </div>
+                </div>
             </div>
     )
 }
