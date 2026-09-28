@@ -1,45 +1,84 @@
 "use client"
 import {useRouter} from "next/navigation"
-import {ReactElement} from "react"
+import {RadioIcon} from "../components/icons/radioicon"
 import {Button} from "../components/button"
 import {LinkIcon} from "../components/icons/linkicon"
 interface cardprops {
     title:string,
     description:string,
     githuburl?: string,
-    tagline?:string
+    tagline?:string,
+    onClick?:()=>void
 }
 export function ProjectCard(props:cardprops)
 {
     const router = useRouter()
-    return  (
-        <div className="bg-mist-200 h-100 w-100 rounded-lg shadow-lg">
-            <div className="pt-2 flex justify-center">
-                <p className="font-Rubik text-md text-primary font-bold text-xl">
-                    {props.title}
-                </p>
+    return (
+        <div className="bg-mist-200 h-155 w-100 rounded-lg shadow-lg p-8">
+      
+         
+          <div>
+            <p className="font-Rubik text-primary font-bold text-2xl">
+              {props.title}
+            </p>
+          </div>
+      
+          
+          <div className="pt-2">
+            <p className="font-Rubik text-primary text-lg">
+              {props.tagline}
+            </p>
+          </div>
+      
+          
+          <div className="pt-6">
+            <p className="font-Rubik text-primary leading-relaxed">
+              {props.description}
+            </p>
+          </div>
+      
+          
+          <div className="flex items-center gap-2 pt-6">
+            <p className="font-Rubik text-lg text-primary">
+              Links
+            </p>
+      
+            <LinkIcon />
+          </div>
+      
+         
+          <div className="pt-4">
+            <div className="pt-2 flex items-center gap-4">
+            <Button
+              onClick={props.onClick}
+              size="sm"
+              startIcon={
+                <img
+                  src="/github.png"
+                  className="h-10 w-10"
+                />
+              }
+              variant="secondary"
+            />
+              <div className="flex items-center gap-2">
+            <p className="text-primary font-Rubik">
+                <span>--▶</span>
+                Code
+            </p>
             </div>
-            <div className="pt-2 flex justify-center">
-                <p className="font-Rubik text-md text-primary font-md text-xl">
-                    {props.tagline}
-                </p>
             </div>
-            <div className="pt-2 flex justify-center pl-8">
-                <p className="font-Rubik font-md text-primary">
-                    {props.description}
-                </p>
+            <div className="pt-2 flex items-center gap-4">
+                <Button onClick={props.onClick} size="md" startIcon={<RadioIcon/>} variant="secondary"/>
+            
+            <div className="flex items-center gap-2">
+            <p className="text-primary font-Rubik">
+                <span>--▶</span>
+                Demo
+            </p>
             </div>
-            <div className="flex items-center  gap-2 pt-4">
-                <p className="font-Rubik text-xl text-primary pl-8 pt-2">
-                    Links
-                </p>
-                <div>
-                    <LinkIcon />
-                </div>
             </div>
-            <div className="pl-8 pt-2">
-                <Button size="sm" startIcon={<img src="./github.png" className="h-10 w-10"/>} variant="secondary" /> 
-            </div>
+          </div>
+      
         </div>
-    )
+      );
 }
