@@ -8,13 +8,14 @@ interface cardprops {
     description:string,
     githuburl?: string,
     tagline?:string,
-    onClick?:()=>void
+    forCode?:()=>void,
+    forLive?:()=>void
 }
 export function ProjectCard(props:cardprops)
 {
     const router = useRouter()
     return (
-        <div className="bg-mist-200 h-155 w-100 rounded-lg shadow-lg p-8">
+        <div className="bg-mist-200 min-h-120 w-100 rounded-lg shadow-lg p-8">
       
          
           <div>
@@ -50,7 +51,7 @@ export function ProjectCard(props:cardprops)
           <div className="pt-4">
             <div className="pt-2 flex items-center gap-4">
             <Button
-              onClick={props.onClick}
+              onClick={props.forCode}
               size="sm"
               startIcon={
                 <img
@@ -68,7 +69,7 @@ export function ProjectCard(props:cardprops)
             </div>
             </div>
             <div className="pt-2 flex items-center gap-4">
-                <Button onClick={props.onClick} size="md" startIcon={<RadioIcon/>} variant="secondary"/>
+                <Button onClick={props.forLive} size="md" startIcon={<RadioIcon/>} variant="secondary"/>
             
             <div className="flex items-center gap-2">
             <p className="text-primary font-Rubik">

@@ -50,7 +50,7 @@ export default function ZrawPage()
                 </p>
             </div>
                 <div className="flex justify-center pt-20">
-                   <ProjectCard title="Overview" description="Zraw is a real-time collaborative drawing application built with Next.js and React
+                   <ProjectCard forCode={()=>window.open("https://tinyurl.com/435rpmpt","_blank")} forLive={()=>window.open("https://tinyurl.com/4835tvxx","_blank")} title="Overview" description="Zraw is a real-time collaborative drawing application built with Next.js and React
                    , allowing users to create and join shared rooms and collaborate on a canvas in real time. It uses WebSocket communication to synchronize drawing events between connected users, 
                    with a backend built using Express and persistent data managed through PostgreSQL and Prisma. The project focuses on real-time state synchronization, room-based collaboration, 
                    and building a responsive canvas experience."  />
@@ -68,7 +68,7 @@ export default function ZrawPage()
                 </div>
                 <div className="flex justify-center pt-10">
                     <p className="text-secondary font-Rubik font-bold text-2xl">
-                    Next.js · React · Express · WebSockets · PostgreSQL · Prisma
+                    Next.js · TypeScript · Express · WebSockets · PostgreSQL · Prisma
                     </p>
                 </div>
                 <div className="flex justify-center pt-20">
