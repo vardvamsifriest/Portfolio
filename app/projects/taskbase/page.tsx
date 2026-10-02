@@ -4,7 +4,7 @@ import Link from "next/link"
 import {IconBar} from "../../components/iconbar"
 import {motion} from "motion/react"
 import {useRouter} from "next/navigation"
-export default function ZrawPage()
+export default function TaskBasePage()
 {
     const router = useRouter()
     return (
