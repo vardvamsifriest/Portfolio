@@ -15,7 +15,7 @@ export function ProjectCard(props:cardprops)
 {
     const router = useRouter()
     return (
-        <div className="bg-mist-200 min-h-120 w-100 rounded-lg shadow-lg p-8">
+        <div className="bg-mist-200 min-h-100 w-100 rounded-lg shadow-lg p-8">
       
          
           <div>
