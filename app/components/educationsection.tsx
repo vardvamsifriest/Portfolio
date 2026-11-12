@@ -10,7 +10,7 @@ export function EducationSection()
             Bangalore Institute of Technology
           </p>
           <p className="font-Rubik text-primary text-xl">
-            BE in Computer Science and Data Science
+            BE in Computer Science
           </p>
           <p className="font-Rubik text-primary text-xl">
             CGPA: (9.68/10)
